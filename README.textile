@@ -8,14 +8,14 @@ gem "merb-core"
 require "merb-core"
 </pre>
 
-Well you do not need to use Kernel#gem method, this will be also OK:
+Well you do not need to use <code>Kernel#gem</code> method, this will be also OK:
 
 <pre>
 require "microgems"
 require "merb-core"
 </pre>
 
-If you do not like to put require "microgems" in all your scripts using stuff from gems, just place <code>export RUBYOPT=rmicrogems</code> into your profile file (/etc/profile or ~/.profile).
+If you do not like to put <code>require "microgems"</code> in all your scripts using stuff from gems, just place <code>export RUBYOPT=rmicrogems</code> into your profile file (<code>/etc/profile</code> or <code>~/.profile</code>).
 
 h1. Installation
 
