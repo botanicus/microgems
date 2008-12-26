@@ -1,0 +1,26 @@
+h1. About
+
+Microgems is drop-in replacement of Minigems which is drop-in replacement of RubyGems. As such, Microgems are the smallest RubyGems implementation ever. It do not provide any RubyGems API, it just handle file loading. No magic. No bloated code. Just Ruby.
+
+<pre>
+require "microgems"
+gem "merb-core"
+require "merb-core"
+</pre>
+
+Well you do not need to use Kernel#gem method, this will be also OK:
+
+<pre>
+require "microgems"
+require "merb-core"
+</pre>
+
+If you do not like to put require "microgems" in all your scripts using stuff from gems, just place <code>export RUBYOPT=rmicrogems</code> into your profile file (/etc/profile or ~/.profile).
+
+h1. Installation
+
+Just run <code>sudo ruby install.rb</code>
+
+h1. Bugs
+
+At the moment Minigems haven't any known bugs, but in some exotic cases Microgems can not work. E. g. if the required files aren't in gem-version/lib, but I haven't seen any gem which use it, so it's not much common at all.
