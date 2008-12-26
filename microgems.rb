@@ -77,13 +77,11 @@ module Kernel
     Microgem.activate(name, version)
   end
 
-  alias __require__
+  alias_method :__require__, :require
   def require(file)
-    begin
-      __require__(file)
-    rescue LoadError
-      gem file
-      __require__(file)
-    end
+    __require__(file)
+  rescue LoadError
+    gem file
+    __require__(file)
   end
 end
